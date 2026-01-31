@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem;
+}
+
+.game-header {
+  background: #020617;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-header h1 {
+  font-size: 1.2rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.stat-item {
+  font-size: 0.9rem;
+}
+
+.reset-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #1d4ed8;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.card {
+  aspect-ratio: 1 / 1;
+  background: #020617;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  user-select: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.flipped {
+  background: #1e293b;
+}
+
+.card.matched {
+  background: #16a34a;
+  cursor: default;
+}
+
+.win-message {
+  background: #16a34a;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .cards-grid {
+    gap: 0.5rem;
+  }
+
+  .card {
+    font-size: 1.7rem;
+  }
+}
